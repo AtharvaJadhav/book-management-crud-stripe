@@ -11,9 +11,11 @@ app.use(bodyParser.json());
 
 const bookRoutes = require('./routes/books');
 const stripeRoutes = require('./routes/stripe');
+const authRoutes = require('./routes/auth');
 
 app.use('/books', bookRoutes);
 app.use('/stripe', stripeRoutes);
+app.use('/auth', authRoutes);
 
 const PORT = process.env.PORT || 5001;
 const uri = process.env.MONGODB_URI;
